@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+input,
+select {
+  border: none;
+  outline: none;
+}
+
+select {
+  cursor: pointer;
+}
+
+a {
+  text-transform: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.maincontainer2 {
+	margin-top:4rem;
+	height: 100vh;
+  width: 100%;
+  background-color: rgb(213, 210, 210);
+}
+.maincontainer2 .wrapper {
+  height: 100%;
+  margin-top:20px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.maincontainer2 .wrapper .contain {
+  position: relative;
+  width: 30%;
+  top: 3rem;
+  padding: 3rem;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #acacac;
+  border-radius: 10px;
+  gap: 30px;
+}
+.maincontainer2 .wrapper .contain h2{
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	background: linear-gradient(45deg, #ff2600, #5100ff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.maincontainer2 .wrapper .contain .inputbox {
+  position: relative;
+  width: 100%;
+}
+.maincontainer2 .wrapper .contain .inputbox input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgb(241, 241, 241);
+  background: transparent;
+  border-radius: 5px;
+  outline: none;
+  color: rgb(2, 2, 2);
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+.maincontainer2 .wrapper .contain .inputbox input:valid ~ span,
+.maincontainer2 .wrapper .contain .inputbox input:focus ~ span {
+  color: #000;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 2px 10px;
+  background: #acacac;
+  border-left: 2px solid #64ffda;
+  border-right: 2px solid #64ffda;
+  letter-spacing: 1px;
+}
+.maincontainer2 .wrapper .contain .inputbox input:valid,
+.maincontainer2 .wrapper .contain .inputbox input:focus {
+  border: 2px solid #64ffda;
+}
+.maincontainer2 .wrapper .contain .inputbox span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.334);
+  pointer-events: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+.maincontainer2 .wrapper .contain p {
+  font-size: 1.4rem;
+}
+.maincontainer2 .wrapper .contain p a {
+  color: red;
+}
+.maincontainer2 .wrapper .contain p :hover {
+  color: blueviolet;
+}
+.maincontainer2 .wrapper .contain .btn button {
+  cursor: pointer;
+  background: linear-gradient(45deg, rgb(74, 164, 77), #64ffda);
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  width: 13rem;
+  height: 5rem;
+  border-radius: 2rem 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+  transition-delay: 0s;
+}
+.maincontainer2 .wrapper .contain .btn button:hover {
+  color: rgb(72, 99, 109);
+}
+.maincontainer2 .form-group input:first-child {
+  margin-right: 2.5rem;
+}
+.maincontainer2 input[type=number]::-webkit-inner-spin-button,
+.maincontainer2 input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
