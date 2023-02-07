@@ -1,0 +1,55 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.maincontainer4 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  margin-top: 6rem;
+  justify-content: center;
+  align-items: start;
+}
+.maincontainer4 table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.maincontainer4 table td, .maincontainer4 table th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  font-size: 2rem;
+}
+.maincontainer4 table th {
+  background-image: linear-gradient(45deg, #00ff04, #ffffff, #ff6600);
+}
+.maincontainer4 table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.maincontainer4 table td button {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.maincontainer4 table td .edit {
+  background-color: #09d00c;
+}
+.maincontainer4 table td .delete {
+  background-color: #ff016f;
+}/*# sourceMappingURL=left.css.map */

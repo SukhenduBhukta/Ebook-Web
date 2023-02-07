@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+	<%@page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,15 +13,20 @@
 <body>
 <div class="maincontainer2">
       <div class="wrapper">
-        <form action="" class="contain">
+        <form action="login" method="post" class="contain">
           <h2>Log-In</h2>
+          <c:if test="${not empty faildMsg }">
+					<p style="color:red;">${faildMsg }</p>
+					<c:remove var="faildMsg" scope="session"/>
+				</c:if>
+				
           <div class="inputbox">
-            <input type="email" required="required" />
+            <input type="email" name="email" required="required" />
             <span>Email</span>
           </div>
           
           <div class="inputbox">
-            <input type="number" required="required" />
+            <input type="password" name="password" required="required" />
             <span>Password</span>
           </div>
           <p><a href="register.jsp">New User/Register</a></p>
