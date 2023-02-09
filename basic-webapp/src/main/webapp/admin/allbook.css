@@ -15,12 +15,16 @@ a {
 }
 
 .maincontainer4 {
-  height: 100vh;
+	min-height:100vh;
   width: 100%;
   display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
   margin-top: 6rem;
-  justify-content: center;
-  align-items: start;
+}
+.maincontainer4 h3{
+	font-size: 2rem;
 }
 .maincontainer4 table {
   border-collapse: collapse;
@@ -33,7 +37,8 @@ a {
   font-size: 2rem;
 }
 .maincontainer4 table th {
-  background-image: linear-gradient(45deg, #00ff04, #ffffff, #ff6600);
+  background-color: #0178ff;
+  color: #fff;
 }
 .maincontainer4 table tr:nth-child(even) {
   background-color: #dddddd;
