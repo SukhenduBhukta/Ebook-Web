@@ -1,3 +1,7 @@
+<%@page import="com.DB.DBconnect"%>
+<%@page import="com.DAO.BookDAOImpl"%>
+<%@page import="com.entity.BookDtls"%>
+<%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,60 +23,44 @@
         <div class="recent">
             <h2>Recent Book</h2>
             <div class="container">
-                <div class="card">
+            <%
+            BookDAOImpl dao2=new BookDAOImpl(DBconnect.getConn());
+            List<BookDtls> list2=dao2.getRecentBook();
+            for(BookDtls b:list2){
+            	%>
+            	<div class="card">
                     <div class="img">
-						<img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-					</div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: New</p>
-                    <div class="btn">
+                        <img src="Book/<%=b.getPhotoName() %>" alt="">
+                    </div>
+                    <p><%=b.getBookname() %></p>
+                    <p><%=b.getAuthor() %></p>
+                    <p>Catagory: <%=b.getBookCategory() %></p>
+                    <%
+                    if(b.getBookCategory().equals("Old Book")){
+                    	%>
+                    	<div class="btn">
+                        <button class="buy">View</button>
+                        <button class="mrp"><%=b.getPrice() %></button>
+                    </div>
+                    	<%
+                    }else{
+                    	%>
+                    	<div class="btn">
                         <button class="addtocart">Cart</button>
                         <button class="buy">View</button>
-                        <button class="mrp">200</button>
+                        <button class="mrp"><%=b.getPrice() %></button>
                     </div>
+                    	<%
+                    }
+                    %>
+                
                 </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-                    </div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: New</p>
-                    <div class="btn">
-                        <button class="addtocart">Cart</button>
-                        <button class="buy">View</button>
-                        <button class="mrp">200</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-                    </div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: New</p>
-                    <div class="btn">
-                        <button class="addtocart">Cart</button>
-                        <button class="buy">View</button>
-                        <button class="mrp">200</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-                    </div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: New</p>
-                    <div class="btn">
-                        <button class="addtocart">Cart</button>
-                        <button class="buy">View</button>
-                        <button class="mrp">200</button>
-                    </div>
-                </div>
-            </div>
-            <button class="view">View All</button>
+            
+            	<%
+            }
+            %>
+              </div>  
+            <a href="all_resent_book.jsp"><button class="view">View All</button></a>
         </div>
         <!-- end recent -->
         
@@ -80,60 +68,30 @@
         <div class="recent">
             <h2>New Book</h2>
             <div class="container">
-                <div class="card">
+            <%
+            BookDAOImpl dao=new BookDAOImpl(DBconnect.getConn());
+            List<BookDtls> list=dao.getNewBook();
+            for(BookDtls b:list){
+            	%>
+            	<div class="card">
                     <div class="img">
-						<img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-					</div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: New</p>
+                        <img src="Book/<%=b.getPhotoName() %>" alt="">
+                    </div>
+                    <p><%=b.getBookname() %></p>
+                    <p><%=b.getAuthor() %></p>
+                    <p>Catagory: <%=b.getBookCategory() %></p>
                     <div class="btn">
                         <button class="addtocart">Cart</button>
                         <button class="buy">View</button>
-                        <button class="mrp">200</button>
+                        <button class="mrp"><%=b.getPrice() %></button>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-                    </div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: New</p>
-                    <div class="btn">
-                        <button class="addtocart">Cart</button>
-                        <button class="buy">View</button>
-                        <button class="mrp">200</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-                    </div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: New</p>
-                    <div class="btn">
-                        <button class="addtocart">Cart</button>
-                        <button class="buy">View</button>
-                        <button class="mrp">200</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-                    </div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: New</p>
-                    <div class="btn">
-                        <button class="addtocart">Cart</button>
-                        <button class="buy">View</button>
-                        <button class="mrp">200</button>
-                    </div>
-                </div>
+            	<%
+            }
+            %>
+                
             </div>
-            <button class="view">View All</button>
+            <a href="all_new_book.jsp"><button class="view">View All</button></a>
         </div>
         <!-- end new -->
         
@@ -141,60 +99,32 @@
         <div class="recent">
             <h2>Old Book</h2>
             <div class="container">
-                <div class="card">
+                
+                <%
+                BookDAOImpl dao3=new BookDAOImpl(DBconnect.getConn());
+                List<BookDtls> list3=dao3.getOldBook();
+                for(BookDtls b:list3){
+                	%>
+                	<div class="card">
                     <div class="img">
-						<img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-					</div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: Old</p>
+                        <img src="Book/<%=b.getPhotoName() %>" alt="">
+                    </div>
+                    <p><%=b.getBookname() %></p>
+                    <p><%=b.getAuthor() %></p>
+                    <p>Catagory: <%=b.getBookCategory() %></p>
                     <div class="btn">
                         
                         <button class="buy">View</button>
-                        <button class="mrp">200</button>
+                        <button class="mrp"><%=b.getPrice() %></button>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-                    </div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: Old</p>
-                    <div class="btn">
-                        
-                        <button class="buy">View</button>
-                        <button class="mrp">200</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-                    </div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: Old</p>
-                    <div class="btn">
-                        
-                        <button class="buy">View</button>
-                        <button class="mrp">200</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="./all_components/pic/29227081._SY475_.jpg" alt="">
-                    </div>
-                    <p>Java</p>
-                    <p>James Patterson</p>
-                    <p>Catagory: Old</p>
-                    <div class="btn">
-                        
-                        <button class="buy">View</button>
-                        <button class="mrp">200</button>
-                    </div>
-                </div>
+                	<%
+                }
+                %>
+                
+                
             </div>
-            <button class="view">View All</button>
+            <a href="all_old_book.jsp"><button class="view">View All</button></a>
         </div>
         <!-- end old -->
         <%@include file="all_components/footer.jsp"%>

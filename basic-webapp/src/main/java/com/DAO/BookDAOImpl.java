@@ -132,6 +132,190 @@ public class BookDAOImpl implements BookDAO {
 		}
 		return f;
 	}
+
+	public List<BookDtls> getNewBook() {
+		List<BookDtls> list = new ArrayList<BookDtls>();
+		BookDtls b=null;
+		try {
+			String sql="Select * from book_dtls where bookCategory=? and status=? order by bookId DESC";
+			PreparedStatement psmt=conn.prepareStatement(sql);
+			psmt.setString(1, "New Book");
+			psmt.setString(2, "Active");
+			ResultSet rs=psmt.executeQuery();
+			int i=0;
+			while (rs.next() && i<4) {
+				b=new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookname(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				list.add(b);
+				i++;
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+
+	public List<BookDtls> getRecentBook() {
+		List<BookDtls> list = new ArrayList<BookDtls>();
+		BookDtls b=null;
+		try {
+			String sql="Select * from book_dtls where status=? order by bookId DESC";
+			PreparedStatement psmt=conn.prepareStatement(sql);
+			psmt.setString(1, "Active");
+			ResultSet rs=psmt.executeQuery();
+			int i=0;
+			while (rs.next() && i<4) {
+				b=new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookname(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				list.add(b);
+				i++;
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+
+	public List<BookDtls> getOldBook() {
+		List<BookDtls> list = new ArrayList<BookDtls>();
+		BookDtls b=null;
+		try {
+			String sql="Select * from book_dtls where bookCategory=? and status=? order by bookId DESC";
+			PreparedStatement psmt=conn.prepareStatement(sql);
+			psmt.setString(1, "Old Book");
+			psmt.setString(2, "Active");
+			ResultSet rs=psmt.executeQuery();
+			int i=0;
+			while (rs.next() && i<4) {
+				b=new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookname(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				list.add(b);
+				i++;
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+
+	public List<BookDtls> getAllRecentBook() {
+		List<BookDtls> list=new ArrayList<BookDtls>();
+		BookDtls b=null;
+		
+		try {
+			
+			String sql="select * from book_dtls where status=? order by bookId DESC";
+			PreparedStatement psmt=conn.prepareStatement(sql);
+			psmt.setString(1, "Active");
+			ResultSet rs = psmt.executeQuery();
+			while(rs.next()){
+				b=new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookname(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				list.add(b);
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+
+	public List<BookDtls> getAllNewBook() {
+		List<BookDtls> list=new ArrayList<BookDtls>();
+		BookDtls b=null;
+		
+		try {
+			
+			String sql="select * from book_dtls where bookCategory=? and status=? order by bookId DESC";
+			PreparedStatement psmt=conn.prepareStatement(sql);
+			psmt.setString(1, "New Book");
+			psmt.setString(2, "Active");
+			ResultSet rs = psmt.executeQuery();
+			while(rs.next()){
+				b=new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookname(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				list.add(b);
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+
+	public List<BookDtls> getAllOldBook() {
+		List<BookDtls> list=new ArrayList<BookDtls>();
+		BookDtls b=null;
+		
+		try {
+			
+			String sql="select * from book_dtls where bookCategory=? and status=? order by bookId DESC";
+			PreparedStatement psmt=conn.prepareStatement(sql);
+			psmt.setString(1, "Old Book");
+			psmt.setString(2, "Active");
+			ResultSet rs = psmt.executeQuery();
+			while(rs.next()){
+				b=new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookname(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				list.add(b);
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
 	
 	
 

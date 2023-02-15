@@ -19,13 +19,13 @@
 				</li>
 			</ol>
 			<ol class="second">
-				<li class="nav active"><a href="#home" class="nav-link"><i
+				<li class="nav active"><a href="index.jsp" class="nav-link"><i
 						class="fa-solid fa-house"></i> Home</a></li>
-				<li class="nav active"><a href="#recent" class="nav-link"><i
+				<li class="nav active"><a href="all_resent_book.jsp" class="nav-link"><i
 						class="fa-solid fa-book"></i>Recent Book</a></li>
-				<li class="nav active"><a href="#new" class="nav-link"><i
+				<li class="nav active"><a href="all_new_book.jsp" class="nav-link"><i
 						class="fa-solid fa-book-open-reader"></i> New Book</a></li>
-				<li class="nav active"><a href="#old" class="nav-link"><i
+				<li class="nav active"><a href="all_old_book.jsp" class="nav-link"><i
 						class="fa-solid fa-clipboard"></i> Old Book</a></li>
 			</ol>
 			<ol class="third">

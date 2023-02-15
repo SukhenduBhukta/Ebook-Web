@@ -15,6 +15,10 @@
       <div class="wrapper">
         <form action="login" method="post" class="contain">
           <h2>Log-In</h2>
+          <c:if test="${not empty sucMsg }">
+					<p style="color:green;">${sucMsg }</p>
+					<c:remove var="sucMsg" scope="session2"/>
+				</c:if>
           <c:if test="${not empty faildMsg }">
 					<p style="color:red;">${faildMsg }</p>
 					<c:remove var="faildMsg" scope="session"/>

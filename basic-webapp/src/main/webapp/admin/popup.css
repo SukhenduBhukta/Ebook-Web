@@ -1,0 +1,80 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.maincontainer {
+
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+}
+.maincontainer .container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.maincontainer .container .popup {
+  width: 30rem;
+  background: #eee;
+  border-radius: 6px;
+  position: absolute;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  text-align: center;
+  padding: 3rem;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.maincontainer .container .popup h2 {
+  font-size: 2rem;
+  margin: 2rem 0 2rem;
+  font-weight: 800;
+}
+.maincontainer .container .popup p {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.maincontainer .container .popup .btnc {
+  display: flex;
+  justify-content: space-around;
+}
+.maincontainer .container .popup .btnc button {
+  margin-top: 5rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.maincontainer .container .popup .btnc .yes {
+  background: #00fb00;
+}
+.maincontainer .container .popup .btnc .cancel {
+  background: #ff0055;
+}
+.maincontainer .container .open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}/*# sourceMappingURL=left.css.map */

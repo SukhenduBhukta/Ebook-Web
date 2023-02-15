@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+	<%@page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +11,9 @@
 </head>
 <body>
 <%@include file="navbar.jsp"%>
+<c:if test="${empty userobj }">
+<c:redirect url="../login.jsp"></c:redirect>
+</c:if>
  <div class="maincontainer3">
         <a href="add_book.jsp"><div class="card">
             <i class="fa-solid fa-circle-plus" style="color:rgb(71, 2, 98)"></i>
@@ -29,5 +34,6 @@
        
     </div>
 <%@include file="footer.jsp"%>
+<script src="main.js"></script>
 </body>
 </html>
