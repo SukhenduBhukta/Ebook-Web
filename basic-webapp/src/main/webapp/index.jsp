@@ -1,9 +1,12 @@
+<%@page import="com.entity.User"%>
 <%@page import="com.DB.DBconnect"%>
 <%@page import="com.DAO.BookDAOImpl"%>
 <%@page import="com.entity.BookDtls"%>
 <%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +16,10 @@
 
 </head>
 <body>
+<%
+User u=(User)session.getAttribute("userobj");
+
+%>
 <%@include file="all_components/navbar.jsp"%>
 <div class="maincontainer">
 <div class="carusal">
@@ -39,15 +46,25 @@
                     if(b.getBookCategory().equals("Old Book")){
                     	%>
                     	<div class="btn">
-                        <button class="buy">View</button>
+                        <a href="view_book.jsp?bid=<%=b.getBookId() %>"><button class="buy">View</button></a>
                         <button class="mrp"><%=b.getPrice() %></button>
                     </div>
                     	<%
                     }else{
                     	%>
                     	<div class="btn">
-                        <button class="addtocart">Cart</button>
-                        <button class="buy">View</button>
+                        <%
+                    if(u==null){
+                    	%>
+                    	<a href="login.jsp"><button class="addtocart">Cart</button></a>
+                    	<%
+                    }else{
+                    	%>
+                    	<a href="cartServlet?bid=<%=b.getBookId() %>&&uid=<%=u.getId() %>"><button class="addtocart">Cart</button></a>
+                    	<%
+                    }
+                    %>
+                        <a href="view_book.jsp?bid=<%=b.getBookId() %>"><button class="buy">View</button></a>
                         <button class="mrp"><%=b.getPrice() %></button>
                     </div>
                     	<%
@@ -81,8 +98,19 @@
                     <p><%=b.getAuthor() %></p>
                     <p>Catagory: <%=b.getBookCategory() %></p>
                     <div class="btn">
-                        <button class="addtocart">Cart</button>
-                        <button class="buy">View</button>
+                    <%
+                    if(u==null){
+                    	%>
+                    	<a href="login.jsp"><button class="addtocart">Cart</button></a>
+                    	<%
+                    }else{
+                    	%>
+                    	<a href="cartServlet?bid=<%=b.getBookId() %>&&uid=<%=u.getId() %>"><button class="addtocart">Cart</button></a>
+                    	<%
+                    }
+                    %>
+
+                        <a href="view_book.jsp?bid=<%=b.getBookId() %>"><button class="buy">View</button></a>
                         <button class="mrp"><%=b.getPrice() %></button>
                     </div>
                 </div>
@@ -114,7 +142,7 @@
                     <p>Catagory: <%=b.getBookCategory() %></p>
                     <div class="btn">
                         
-                        <button class="buy">View</button>
+                        <a href="view_book.jsp?bid=<%=b.getBookId() %>"><button class="buy">View</button></a>
                         <button class="mrp"><%=b.getPrice() %></button>
                     </div>
                 </div>

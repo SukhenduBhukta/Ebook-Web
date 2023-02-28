@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	<%@page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,7 @@
           <h2>Log-In</h2>
           <c:if test="${not empty sucMsg }">
 					<p style="color:green;">${sucMsg }</p>
-					<c:remove var="sucMsg" scope="session2"/>
+					<c:remove var="sucMsg" scope="session"/>
 				</c:if>
           <c:if test="${not empty faildMsg }">
 					<p style="color:red;">${faildMsg }</p>

@@ -34,7 +34,7 @@
                     if(b.getBookCategory().equals("Old Book")){
                     	%>
                     	<div class="btn">
-                        <button class="buy">View</button>
+                        <a href="view_book.jsp?bid=<%=b.getBookId() %>"><button class="buy">View</button></a>
                         <button class="mrp"><%=b.getPrice() %></button>
                     </div>
                     	<%
@@ -42,7 +42,7 @@
                     	%>
                     	<div class="btn">
                         <button class="addtocart">Cart</button>
-                        <button class="buy">View</button>
+                        <a href="view_book.jsp?bid=<%=b.getBookId() %>"><button class="buy">View</button></a>
                         <button class="mrp"><%=b.getPrice() %></button>
                     </div>
                     	<%
