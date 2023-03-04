@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
 <div class="maincontainer">
 	<div class="head">
 		<div class="navbar">
@@ -29,15 +31,20 @@
 						class="fa-solid fa-clipboard"></i> Old Book</a></li>
 			</ol>
 			<ol class="third">
-
-
-				<li><a href="#setting"><i class="fa-solid fa-gears"></i>
+		
+						<c:if test="${not empty userobj }">
+						<li><a href="#setting"><i class="fa-solid fa-gears"></i>
 						Setting</a></li>
 				<li><a href="#massage"><i class="fa-solid fa-address-book"></i>
 						Contact Us</a></li>
-				<li><a href="#massage"><i class="fa-solid fa-cart-shopping"></i>
+						<li><a href="cart.jsp"><i class="fa-solid fa-cart-shopping"></i>
 						Cart</a></li>
-				<li><a href="login.jsp"><button type="submit">Login</button></a></li>
+						<li><a href="#">${userobj.name }</a></li>
+						</c:if>
+						<c:if test="${ empty userobj }">
+						<li><a href="login.jsp"><button type="submit">Login</button></a></li>
+						</c:if>
+				
 			</ol>
 		</div>
 	</div>

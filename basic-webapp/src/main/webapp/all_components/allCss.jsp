@@ -6,4 +6,5 @@
 <link rel="stylesheet" href="all_components/style.css" />
 <link rel="stylesheet" href="all_components/body.css" />
 <link rel="stylesheet" href="all_components/form.css" />
+<link rel="stylesheet" href="all_components/cart.css" />
 <link rel="stylesheet" href="all_components/view_book.css" />

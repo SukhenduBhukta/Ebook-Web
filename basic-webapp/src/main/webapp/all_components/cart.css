@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+input,
+select {
+  border: none;
+  outline: none;
+}
+
+select {
+  cursor: pointer;
+}
+
+a {
+  text-transform: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.maincontainer4 {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  margin: 5rem 0;
+  background: #c1c1c1;
+}
+.maincontainer4 .item {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 0;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  background: #717171;
+  border-radius: 1rem;
+}
+.maincontainer4 .item h2 {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+.maincontainer4 .item table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+.maincontainer4 .item table td, .maincontainer4 .item table th {
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 8px;
+}
+.maincontainer4 .item table th {
+  background: #000;
+  color: #fff;
+}
+.maincontainer4 .item table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+.maincontainer4 .item table tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+.maincontainer4 .item table tr:hover {
+  background: #00c8ff;
+}
+.maincontainer4 .fill {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 0;
+  padding: 5rem;
+  background: #444;
+  border-radius: 1rem;
+}
+.maincontainer4 .fill h2 {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+.maincontainer4 .fill .inputsec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0rem;
+}
+.maincontainer4 .fill .inputsec input {
+  margin: 0 2rem;
+  padding: 1rem;
+  width: 25rem;
+  border-radius: .5rem;
+}
+.maincontainer4 .fill .inputsec select {
+  padding: 1rem;
+  border-radius: .5rem;
+  width: 88%;
+}
+.maincontainer4 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 0 0;
+}
+.maincontainer4 .btn button {
+  padding: 1rem 1rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.maincontainer4 .btn .order {
+  background: rgb(255, 196, 0);
+  color: #fff;
+  font-weight: 600;
+}
+.maincontainer4 .btn .continue {
+  background: rgb(3, 95, 255);
+  color: #fff;
+  font-weight: 600;
+}/*# sourceMappingURL=right.css.map */

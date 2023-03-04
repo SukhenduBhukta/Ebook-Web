@@ -1,6 +1,7 @@
 package com.entity;
 
 public class Cart {
+	private int cid;
 	private int bid;
 	private int userId;
 	private String bookName;
@@ -8,6 +9,13 @@ public class Cart {
 	private Double price;
 	private Double tprice;
 
+	
+	public int getCid() {
+		return cid;
+	}
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
 	public int getBid() {
 		return bid;
 	}
