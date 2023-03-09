@@ -93,5 +93,12 @@
         </form>
     </div>
     <%@include file="all_components/footer.jsp"%>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
 </body>
 </html>

@@ -92,6 +92,16 @@ i {
 .maincontainer4 .item table tr:hover {
   background: #00c8ff;
 }
+.maincontainer4 .item table tr td button {
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 0.8rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: #ff016f;
+}
 .maincontainer4 .fill {
   width: 40%;
   display: flex;

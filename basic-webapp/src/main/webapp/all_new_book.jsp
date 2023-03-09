@@ -134,5 +134,12 @@ User u=(User)session.getAttribute("userobj");
         </div>
         <%@include file="all_components/footer.jsp"%>
 </div>
+<script>
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
 </body>
 </html>

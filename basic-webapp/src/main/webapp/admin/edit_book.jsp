@@ -14,6 +14,9 @@
 </head>
 <body>
 <%@include file="navbar.jsp"%>
+<c:if test="${empty userobj }">
+<c:redirect url="../login.jsp"></c:redirect>
+</c:if>
 <div class="maincontainer2">
 		<div class="wrapper">
 			<%

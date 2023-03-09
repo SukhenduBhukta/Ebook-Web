@@ -7,16 +7,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Add Books</title>
-<%@include file="allCss.jsp"%>
+<%@include file="all_components/allCss.jsp"%>
 </head>
 <body>
-<%@include file="navbar.jsp"%>
+
+<%@include file="all_components/navbar.jsp"%>
 <c:if test="${empty userobj }">
-<c:redirect url="../login.jsp"></c:redirect>
+<c:redirect url="login.jsp"></c:redirect>
 </c:if>
 <div class="maincontainer2">
 		<div class="wrapper">
-			<form action="../add_book" method="post" class="contain" enctype="multipart/form-data">
+			<form action="add_old_book" method="post" class="contain" enctype="multipart/form-data">
 				<h2>Book Add</h2>
 				 <c:if test="${not empty sucMsg }">
 					<p style="color:green;">${sucMsg }</p>
@@ -26,7 +27,7 @@
 					<p style="color:red;">${faileMsg }</p>
 					<c:remove var="faileMsg" scope="session"/>
 				</c:if>
-
+				<input type="hidden" name="uemail" value="${userobj.email }">
 				<div class="inputbox">
 					<input type="text" name="bname" required="required" /> <span>Book
 						Name</span>
@@ -38,32 +39,18 @@
 					<input type="number" name="price" required="required" /> <span>Price
 						</span>
 				</div>
-				<div class="inputbox">
-					<select name="category" required="required">
-					<option selected>Select</option>
-  <option value="New Book">New Book</option>
-
-					</select> <span>Book Categories</span>
-				</div>
-				<div class="inputbox">
-					<select name="status" required="required">
-					<option selected>Select</option>
-  <option value="Active">Active</option>
-  <option value="Inactive">Inactive</option>
-
-					</select> <span>Book Status</span>
-				</div>
+				
 				<div class="inputbox">
 					<input type="file" name="bimg" required="required" /> <span>Upload Photo
 						</span>
 				</div>
 					<div class="btn">
 					<button type="submit">
-						<span>Add</span>
+						<span>Sell</span>
 					</button>
 				</div>
 			</form>
 		</div>
-		<%@include file="footer.jsp"%>
+		<%@include file="all_components/footer.jsp"%>
 </body>
 </html>

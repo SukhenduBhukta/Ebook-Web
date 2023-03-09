@@ -64,7 +64,7 @@ i {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #acacac;
+  background: #3d3d3d;
   border-radius: 10px;
   gap: 30px;
 }
@@ -86,18 +86,18 @@ i {
   background: transparent;
   border-radius: 5px;
   outline: none;
-  color: rgb(2, 2, 2);
+  color: #fff;
   font-size: 1.2rem;
   transition: 0.5s;
 }
 .maincontainer2 .wrapper .contain .inputbox input:valid ~ span,
 .maincontainer2 .wrapper .contain .inputbox input:focus ~ span {
-  color: #000;
+  color: #fff;
   transform: translateX(10px) translateY(-7px);
   font-size: 1rem;
   font-weight: 500;
   padding: 2px 10px;
-  background: #acacac;
+  background: #3d3d3d;
   border-left: 2px solid #64ffda;
   border-right: 2px solid #64ffda;
   letter-spacing: 1px;

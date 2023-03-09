@@ -192,6 +192,12 @@ i {
 .maincontainer .head .navbar .third li a {
 	color: #fff;
 }
+.maincontainer .head .navbar .third li img{
+	transform: translateY(-1.5rem);
+	height:5rem;
+	width: 5rem;
+	border-radius: 50%;
+}
 
 .maincontainer .head .navbar .third li button {
 	height: 3rem;
@@ -212,6 +218,82 @@ i {
 .maincontainer .head .navbar .third :hover {
 	color: aqua;
 	background-color: rgb(206, 87, 32);
+}
+.maincontainer .head .navbar .sub-menu-wrap {
+  position: absolute;
+  top: 100%;
+  right: 2%;
+  width: 32rem;
+  max-height: 0rem;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .user-info {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  width: 5rem;
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .user-info img {
+  border-radius: 50%;
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .user-info h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-left: 1.5rem;
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu hr {
+  height: 1px;
+  width: 100%;
+  margin: 1.5rem 0 1rem;
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #525252;
+  margin: 1.5rem 0;
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .sub-menu-link i{
+  font-size: 2rem;
+  padding: .8rem;
+  margin-right: .5rem;
+  border-radius: 100%;
+  color: lightblue;
+  background: #525252;
+  font-weight: 520;
+  transition: transform 0.5s;
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .sub-menu-link p {
+  font-size: 1.5rem;
+  font-weight: 520;
+  width: 100%;
+  transition: transform 0.5s;
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .sub-menu-link span {
+  font-size: 1.5rem;
+  transition: transform 0.5s;
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .sub-menu-link span:hover {
+  transform: translateX(5px);
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .sub-menu-link:hover p,
+.maincontainer .head .navbar .sub-menu-wrap .sub-menu .sub-menu-link:hover i {
+  transform: translateX(3px);
+  font-weight: 550;
+}
+.maincontainer .head .navbar .open-menu {
+  max-height: 45rem;
 }
 footer {
   background: rgb(116, 116, 116);
